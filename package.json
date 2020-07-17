@@ -1,6 +1,6 @@
 {
-  "name": "vue-manage-system",
-  "version": "4.1.0",
+  "name": "new-yww",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "npm run serve",
@@ -10,10 +10,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
-    "element-ui": "^2.11.0",
+    "element-ui": "^2.13.2",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3",
-    "vue-schart": "^1.0.0"
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
