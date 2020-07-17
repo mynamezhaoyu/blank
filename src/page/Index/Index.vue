@@ -1,5 +1,11 @@
 <template>
-  <div>首页</div>
+  <div class="index">
+    首页
+    <i class="icon-yww-set"></i>
+    <svg aria-hidden="true" class="icon">
+      <use xlink:href="#test-icon-word-ext" />
+    </svg>
+  </div>
 </template>
 
 <script>

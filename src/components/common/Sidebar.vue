@@ -42,29 +42,28 @@
 </template>
 
 <script>
-import bus from '../common/bus';
 export default {
   data() {
     return {
       collapse: false,
       items: [
         {
-          icon: 'el-icon-lx-home',
+          icon: 'el-icon-s-promotion',
           index: 'index',
           title: '首页'
         },
         {
-          icon: 'el-icon-lx-home',
+          icon: 'el-icon-s-goods',
           index: 'supplier',
           title: '供应商管理'
         },
         {
-          icon: 'el-icon-lx-home',
+          icon: 'el-icon-s-shop',
           index: 'product',
           title: '货品管理'
         },
         {
-          icon: 'el-icon-lx-home',
+          icon: 'el-icon-s-custom',
           index: 'customer',
           title: '客户管理'
         }
@@ -78,14 +77,14 @@ export default {
   },
   created() {
     // 通过 Event Bus 进行组件间通信，来折叠侧边栏
-    bus.$on('collapse', msg => {
+    this.$bus.$on('collapse', msg => {
       this.collapse = msg;
     });
   }
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .sidebar {
   display: block;
   position: absolute;
@@ -93,14 +92,11 @@ export default {
   top: 70px;
   bottom: 0;
   overflow-y: scroll;
-}
-.sidebar::-webkit-scrollbar {
-  width: 0;
-}
-.sidebar-el-menu:not(.el-menu--collapse) {
-  width: 250px;
-}
-.sidebar > ul {
-  height: 100%;
+  ::v-deep ul {
+    height: 100%;
+  }
+  ::v-deep .sidebar-el-menu:not(.el-menu--collapse) {
+    width: 250px;
+  }
 }
 </style>

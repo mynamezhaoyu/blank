@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import bus from '../../components/common/bus';
 export default {
   name: 'supplier',
   data() {
